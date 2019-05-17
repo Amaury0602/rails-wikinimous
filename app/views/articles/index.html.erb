@@ -1,0 +1,24 @@
+<div class="container">
+
+<div class="d-flex space-around">
+  <div class="">
+    <h1 class="text-center"> Here's all your articles</h1>
+
+      <% @articles.each do |article| %>
+      <div class="border border-dark m-3 px-2 font-weight-bold shadow bg-white rounded">
+        <p><%=link_to article.title, article_path(article)%></p>
+        <p><%=article.content%></p>
+        </p>
+      </div>
+      <%end%>
+    </div>
+
+  <div class="border border-dark m-3 px-2 font-weight-bold shadow bg-white rounded">
+    <div class="border">
+      <h3>Write new article</h3>
+      <p><%= link_to "Write", new_path %></p>
+      </div>
+  </div>
+  </div>
+
+</div>
